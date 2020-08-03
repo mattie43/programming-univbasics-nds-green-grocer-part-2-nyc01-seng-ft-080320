@@ -9,7 +9,7 @@ def apply_coupons(cart, coupons)
   cart.each do |item|
     coupons.each do |coupon|
       binding.pry
-      if coupon[:item] == item[:item] && item
+      if item[:item] == coupon[:item] && item[:count] >= coupon[:num]
         item[:count] -= coupon[:num]
       end
     end
