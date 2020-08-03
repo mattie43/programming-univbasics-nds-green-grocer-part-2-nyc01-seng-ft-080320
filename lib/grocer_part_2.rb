@@ -12,6 +12,9 @@ def apply_coupons(cart, coupons)
       binding.pry
       if item[:item] == coupon[:item] && item[:count] >= coupon[:num]
         item[:count] -= coupon[:num]
+        if item[:count] == 0
+          
+        end
       end
     end
   end
