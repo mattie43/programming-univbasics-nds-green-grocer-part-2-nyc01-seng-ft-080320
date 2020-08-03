@@ -9,10 +9,10 @@ def apply_coupons(cart, coupons)
     coupons.each do |coupon|
       if item[:item] == coupon[:item] && item[:count] >= coupon[:num]
         cart << {
-          :item = "#{item[:item]} W/COUPON",
-          :price = coupon[:cost] / coupon[:num],
-          :clearance = item[:coupon],
-          :count = coupon[:num]
+          :item => "#{item[:item]} W/COUPON",
+          :price => coupon[:cost] / coupon[:num],
+          :clearance => item[:coupon],
+          :count => coupon[:num]
         }
         item[:count] = coupon[:num]
       end
