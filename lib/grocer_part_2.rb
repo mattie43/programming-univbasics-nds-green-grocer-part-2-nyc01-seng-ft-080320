@@ -5,7 +5,10 @@ def apply_coupons(cart, coupons)
   # Consult README for inputs and outputs
   #
   # REMEMBER: This method **should** update cart
-  binding.pry
+  final_arr = []
+  cart.each do |item_data|
+    binding.pry
+  end
 end
 
 def apply_clearance(cart)
