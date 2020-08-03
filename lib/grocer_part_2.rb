@@ -9,6 +9,8 @@ def apply_coupons(cart, coupons)
   cart.each do |item_data|
     coupons.each do |coupon|
       binding.pry
+      if coupon[:item] == item_data[:item]
+      end
     end
   end
 end
