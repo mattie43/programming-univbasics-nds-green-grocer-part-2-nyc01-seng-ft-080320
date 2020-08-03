@@ -6,6 +6,7 @@ def apply_coupons(cart, coupons)
   #
   # REMEMBER: This method **should** update cart
   final_arr = []
+  binding.pry
   cart.each do |item|
     coupons.each do |coupon|
       binding.pry
