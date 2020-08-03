@@ -11,11 +11,10 @@ def apply_coupons(cart, coupons)
       if item[:item] == coupon[:item] && item[:count] >= coupon[:num]
         item[:count] -= coupon[:num]
         final_arr << item if item[:count] > 0
-        binding.pry
       end
     end
   end
-  binding.pry
+  final_arr
 end
 
 def apply_clearance(cart)
