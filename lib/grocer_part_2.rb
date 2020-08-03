@@ -48,6 +48,7 @@ def checkout(cart, coupons)
   apply_coupons(cart)
   apply_clearance(cart)
   total = 0
+  binding.pry
   cart.each do |item|
     binding.pry
     total += item[:price]
