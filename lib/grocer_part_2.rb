@@ -5,16 +5,15 @@ def apply_coupons(cart, coupons)
   # Consult README for inputs and outputs
   #
   # REMEMBER: This method **should** update cart
-  final_arr = []
   cart.each do |item|
     coupons.each do |coupon|
       if item[:item] == coupon[:item] && item[:count] >= coupon[:num]
         item[:count] -= coupon[:num]
-        final_arr << item if item[:count] > 0
+        item[:item] = "#{item[:item]} W/COUPON"
       end
     end
   end
-  final_arr
+  binding.pry
 end
 
 def apply_clearance(cart)
