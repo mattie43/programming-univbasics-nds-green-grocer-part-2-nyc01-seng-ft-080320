@@ -6,10 +6,11 @@ def apply_coupons(cart, coupons)
   #
   # REMEMBER: This method **should** update cart
   final_arr = []
-  cart.each do |item_data|
+  cart.each do |item|
     coupons.each do |coupon|
       binding.pry
-      if coupon[:item] == item_data[:item]
+      if coupon[:item] == item[:item] && item
+        item[:count] -= coupon[:num]
       end
     end
   end
