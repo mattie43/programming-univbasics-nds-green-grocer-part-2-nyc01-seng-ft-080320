@@ -26,7 +26,7 @@ def apply_clearance(cart)
   #
   # REMEMBER: This method **should** update cart
   cart.each { |item| item[:price] *= 0.8 if item[:clearance] == true }
-  #binding.pry
+  binding.pry
 end
 
 def checkout(cart, coupons)
@@ -39,4 +39,5 @@ def checkout(cart, coupons)
   #
   # BEFORE it begins the work of calculating the total (or else you might have
   # some irritated customers
+  
 end
